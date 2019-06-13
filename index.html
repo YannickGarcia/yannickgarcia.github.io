@@ -1,0 +1,296 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+      <div class="backdrop"></div>
+
+      <div class="panel">
+        <div class="wrapperPanel">
+          <div class="innerPanel">
+
+            <div class="panelHeader">
+              <p>Train details</p>
+              <img src="img/Cross.svg" />
+            </div>
+
+        <div class="panelContent">
+
+          <div class="legs"></div>
+
+          <h3>Select fare and class</h3>
+          <div class="superFares">
+            <div class="trainIcons">
+              <div class="trainIcon iconDepart">
+                <img src="img/DepartIcon.svg" />
+                <span>Depart</span>
+              </div>
+              <div class="trainIcon iconReturn">
+                <img src="img/ReturnIcon.svg" />
+                <span>Return</span>
+              </div>
+            </div>
+
+
+            <div class="fares">
+
+              <div id="selectedReturn" class="selectedFare goTo2">
+                <!-- <div class="wrapper"><span></span></div> -->
+              </div>
+              <div id="selectedDepart" class="selectedFare"></div>
+
+              <div class="normalFares">
+              <div id="fare1" class="fare">
+                <div class="fare-descr">
+                  <div class="name-info">
+                    <div class="name">Advance Single</div>
+                    <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                  </div>
+                  <div class="subtitle">Specified train only. No refunds.</div>
+                </div>
+                <div class="fare-prices">
+                  <div id="depart1" class="way-fare depart selected">
+                    <div class="way">Depart</div>
+                    <div class="price"><span>€</span><span class="prix">40.55</span></div>
+                    <span class="cheapest">Cheapest</span>
+                  </div>
+                  <div id="return1" class="way-fare return">
+                    <div class="way">Return</div>
+                    <div class="price"><span>€</span><span class="prix">48.50</span></div>
+                  </div>
+                </div>
+              </div>
+
+
+                <div id="fare2" class="fare">
+                  <div class="fare-descr">
+                    <div class="name-info">
+                      <div class="name">Off Peak Single (Online)</div>
+                      <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                    </div>
+                    <div class="subtitle">Internet only. Can only be booked as part of a return journey.</div>
+                  </div>
+                  <div class="fare-prices">
+                    <div id="depart2" class="way-fare depart">
+                      <div class="way">Depart</div>
+                      <div class="price"><span>€</span><span class="prix">53.43</span></div>
+                    </div>
+                    <div id="return2" class="way-fare return selected">
+                      <div class="way">Return</div>
+                      <div class="price"><span>€</span><span class="prix">29.82</span></div>
+                      <span class="cheapest">Cheapest</span>
+                    </div>
+                  </div>
+                </div>
+
+
+                  <div id="fare3" class="fare">
+                    <div class="fare-descr">
+                      <div class="name-info">
+                        <div class="name">Advance Single (1st Class)</div>
+                        <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                      </div>
+                      <div class="subtitle">Specified train only. No refunds.</div>
+                    </div>
+                    <div class="fare-prices">
+                      <div id="depart3" class="way-fare depart">
+                        <div class="way">Depart</div>
+                        <div class="price"><span>€</span><span class="prix">56.06</span></div>
+                      </div>
+                      <div id="return3" class="way-fare return">
+                        <div class="way">Return</div>
+                        <div class="price"><span>€</span><span class="prix">59.99</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                    <div id="fare4" class="fare">
+                      <div class="fare-descr">
+                        <div class="name-info">
+                          <div class="name">Off-Peak Single</div>
+                          <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                        </div>
+                        <div class="subtitle">Any off-peak train.</div>
+                      </div>
+                      <div class="fare-prices">
+                        <div id="depart4" class="way-fare depart">
+                          <div class="way">Depart</div>
+                          <div class="price"><span>€</span><span class="prix">105.67</span></div>
+                        </div>
+                        <div id="return4" class="way-fare return">
+                          <div class="way">Return</div>
+                          <div class="price"><span>€</span><span class="prix">105.67</span></div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div id="fare5" class="fare">
+                      <div class="fare-descr">
+                        <div class="name-info">
+                          <div class="name">Off-Peak Single (1st Class)</div>
+                          <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                        </div>
+                        <div class="subtitle">Any off-peak train.</div>
+                      </div>
+                      <div class="fare-prices">
+                        <div id="depart5" class="way-fare depart">
+                          <div class="way">Depart</div>
+                          <div class="price"><span>€</span><span class="prix">184.87</span></div>
+                        </div>
+                        <div id="return5" class="way-fare return">
+                          <div class="way">Return</div>
+                          <div class="price"><span>€</span><span class="prix">201.30</span></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="fare6" class="fare">
+                      <div class="fare-descr">
+                        <div class="name-info">
+                          <div class="name">Anytime Single</div>
+                          <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                        </div>
+                        <div class="subtitle">Travel any time of day.</div>
+                      </div>
+                      <div class="fare-prices">
+                        <div id="depart6" class="way-fare depart">
+                          <div class="way">Depart</div>
+                          <div class="price"><span>€</span><span class="prix">208.72</span></div>
+                        </div>
+                        <div id="return6" class="way-fare return">
+                          <div class="way">Return</div>
+                          <div class="price"><span>€</span><span class="prix">212.99</span></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="fare7" class="fare">
+                      <div class="fare-descr">
+                        <div class="name-info">
+                          <div class="name">Anytime Single (1st Class)</div>
+                          <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                        </div>
+                        <div class="subtitle">Travel any time of day.</div>
+                      </div>
+                      <div class="fare-prices">
+                        <div id="depart7" class="way-fare depart">
+                          <div class="way">Depart</div>
+                          <div class="price"><span>€</span><span class="prix">288.63</span></div>
+                        </div>
+                        <div id="return7" class="way-fare return">
+                          <div class="way">Return</div>
+                          <div class="price"><span>€</span><span class="prix">288.63</span></div>
+                          <!-- <span class="combine">Can't combine with Depart selection</span> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- normalFares -->
+                    <div class="showOpenReturn"><a href="#">Open Return tickets</a></div>
+
+                    <div class="openReturnFares">
+
+                      <div id="fare8" class="fare openReturnFare">
+                        <div class="fare-descr">
+                          <div class="name-info">
+                            <div class="name">Off-Peak Return</div>
+                            <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                          </div>
+                          <div class="subtitle">Any off-peak train. Return within 1 month.</div>
+                        </div>
+                        <div class="fare-prices">
+                          <div id="return8" class="way-fare return">
+                            <div class="way">Open Return</div>
+                            <div class="price"><span>€</span><span class="prix">105.57</span></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="fare9" class="fare openReturnFare">
+                        <div class="fare-descr">
+                          <div class="name-info">
+                            <div class="name">Anytime Return</div>
+                            <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                          </div>
+                          <div class="subtitle">Any time of the day, return within 1 month.</div>
+                        </div>
+                        <div class="fare-prices">
+                          <div id="return9" class="way-fare return">
+                            <div class="way">Open Return</div>
+                            <div class="price"><span>€</span><span class="prix">365.24</span></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="fare10" class="fare openReturnFare">
+                        <div class="fare-descr">
+                          <div class="name-info">
+                            <div class="name">Off-Peak Return (1st Class)</div>
+                            <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                          </div>
+                          <div class="subtitle">Any off-peak train. Return within 1 month.</div>
+                        </div>
+                        <div class="fare-prices">
+                          <div id="return10" class="way-fare return">
+                            <div class="way">Open Return</div>
+                            <div class="price"><span>€</span><span class="prix">412.37</span></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="fare11" class="fare openReturnFare">
+                        <div class="fare-descr">
+                          <div class="name-info">
+                            <div class="name">Anytime Return (1st Class)</div>
+                            <div class="infoIcon"><img src="img/InfoIcon.svg" /></div>
+                          </div>
+                          <div class="subtitle">Any time of the day, return within 1 month.</div>
+                        </div>
+                        <div class="fare-prices">
+                          <div id="return11" class="way-fare return">
+                            <div class="way">Open Return</div>
+                            <div class="price"><span>€</span><span class="prix">570.25</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- openReturnFares -->
+            </div><!-- fares -->
+
+          </div><!-- superFares -->
+
+          <h3>Ticket delivery</h3>
+          <div class="ticket"></div>
+
+          <h3>Travelers</h3>
+          <div class="travelers"></div>
+        </div> <!-- panelContent -->
+
+        <div class="panelFooter">
+          <div class="footerPrice">
+            <p class="totalPrice"><span>€</span><span class="totalPriceNumber">74.32</span></p>
+            <p class="discl">Prices and availability can change. Don’t wait long.</p>
+          </div>
+          <button>Add to trip</button>
+        </div>
+      </div><!-- innerPanel -->
+      </div><!-- wrapperPanel -->
+      </div><!-- panel -->
+
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

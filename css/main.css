@@ -1,0 +1,612 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+p, h3{padding: 0;margin: 0;}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 14px/24px 'Open Sans', Helvetica Neue, Arial;
+    color: #1D2C3C;
+    padding-top: 40px;
+}
+
+.alpha50{
+  opacity: .5;
+}
+
+.panel{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 16px 47px 0px, rgba(50, 50, 93, 0.06) 0px 2px 16px 0px;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+}
+.wrapperPanel{min-height: 100%;width: 100%;}
+.innerPanel{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.panelHeader{
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px;
+  border-bottom: 1px solid rgb(239, 243, 247);
+}
+.panelHeader p{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.panelFooter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px;
+  border-top: 1px solid rgb(239, 243, 247);
+}
+.panelFooter .totalPrice{
+  font-size: 18px;font-weight: 600;line-height: 28px;
+}
+
+.panelFooter button{
+  font-size: 16px;
+  font-weight: 600;
+    line-height: 24px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    background-color: rgb(19, 150, 228);
+    background-image: linear-gradient(-45deg, rgb(19, 150, 228) 0%, rgb(86, 180, 236) 100%);
+    padding: 8px 16px;
+    border-radius: 4px;
+    border-width: 0px;
+    border-style: solid;
+}
+
+.panelContent {
+    padding: 32px 16px;
+    overflow-y: auto;
+    width: 100%;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    height: 0px;
+}
+
+h3{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  padding-top: 48px;
+  padding-bottom: 16px;
+}
+
+.legs{
+  width: 100%;
+  height: 470px;
+  background: transparent url("../img/xs-details.png") 0px 0 no-repeat;
+  background-size: 292px auto;
+}
+.travelers{
+  width: 100%;
+  height: 74px;
+  background: transparent url("../img/xs-travelers.png") 0px 0 no-repeat;
+  background-size: 288px 74px;
+}
+.ticket{
+  width: 100%;
+  height: 186px;
+  background: transparent url("../img/xs-ticket.png") 0px 0 no-repeat;
+  background-size: 288px 186px;
+}
+.discl{
+  display: none;
+}
+.trainIcons{display: none;}
+
+.fares{
+  position: relative;
+}
+
+.selectedFare{
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:120px;
+  background-color: #fff;
+  border: 1px solid #D9E2EC;
+  border-radius: 8px;
+  margin-top: 0px;
+  transition: margin-top .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.selectedFare.goTo1{ margin-top: 0px;}
+.selectedFare.goTo2{ margin-top: calc(1 * 136px); height: 140px;}
+.selectedFare.goTo3{ margin-top: calc((2 * 136px) + 20px);}
+.selectedFare.goTo4{ margin-top: calc((3 * 136px) + 20px);}
+.selectedFare.goTo5{ margin-top: calc((4 * 136px) + 20px);}
+.selectedFare.goTo6{ margin-top: calc((5 * 136px) + 20px);}
+.selectedFare.goTo7{ margin-top: calc((6 * 136px) + 20px);}
+.selectedFare.goTo8{ margin-top: calc((7 * 136px) + 62px);}
+.selectedFare.goTo9{ margin-top: calc((8 * 136px) + 62px);}
+.selectedFare.goTo10{ margin-top: calc((9 * 136px) + 62px);}
+.selectedFare.goTo11{ margin-top: calc((10 * 136px) + 62px);}
+
+#selectedReturn .wrapper{
+  background-color: transparent;
+  width:100%;
+  position: relative;
+  height: 100%;
+}
+#selectedReturn .wrapper span{
+  background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 20%, rgba(255,255,255,0.9) 80%, rgba(255,255,255,0) 100%);
+  width:126px;
+  position: absolute;
+  right: 104px;
+  top: -1px;
+  bottom: -1px;
+}
+
+.name{
+  font-weight: 600;
+}
+.subtitle{
+  font-size: 12px;
+  line-height: 20px;
+}
+.way{
+  font-size: 10px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.price{
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.fare{
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 8px;
+  margin-bottom: 16px;
+  z-index: 20;
+}
+
+.fare.selected{
+}
+
+.name-info{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.fare-prices{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.way-fare{
+    border-radius: 8px;
+    width: 106px;
+    padding: 8px;
+    background-color: #EFF3F7;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .3 ease;
+    position: relative;
+}
+
+.openReturnFare .way-fare{
+  width: 100%;
+}
+
+.way-fare.selected{
+  background-color: #C5F6E0;
+  transition: background-color .3 ease;
+}
+.way-fare.disabled{
+  background-color: #F9FAFC;
+}
+.way-fare.disabled .price, .way-fare.disabled .way{
+  color: #9AABBC;
+}
+
+.cheapest{
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  display: inline-block;
+  line-height: 10px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background-color: #2AC981;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+}
+
+.showOpenReturn a{
+  text-decoration: none;
+  font-weight: 600;
+  color: #1396E4;
+  line-height: 40px;
+}
+
+.openReturnFares{
+  display: none;
+}
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE
+   ==================== */
+
+}
+
+@media only screen and (min-width: 600px) {
+
+  body{
+    background-image: url("../img/desktopBG.jpg");
+    background-repeat: no-repeat;
+    background-position: left 0;
+    -webkit-background-size: 100%;
+    background-attachment: fixed;
+    background-size: 1421px 762px;
+  }
+  .backdrop{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .panelHeader, .panelFooter{
+    padding: 16px 40px;
+    width: 768px;
+  }
+
+  .panelContent {
+      padding: 32px 40px;
+  }
+  .panel{
+    width: 768px;
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 16px 47px 0px, rgba(50, 50, 93, 0.06) 0px 2px 16px 0px;
+  }
+  .discl{display: block;font-size: 12px;line-height: 20px;}
+
+  .legs{
+    width: 100%;
+    height: 392px;
+    background: transparent url("../img/details.png") -4px 0 no-repeat;
+    background-size: 697px 392px;
+  }
+  .travelers{
+    width: 100%;
+    height: 74px;
+    background: transparent url("../img/travelers.png") 0px 0 no-repeat;
+    background-size: 688px 74px;
+  }
+  .ticket{
+    width: 100%;
+    height: 138px;
+    background: transparent url("../img/ticket.png") 0px 0 no-repeat;
+    background-size: 688px 138px;
+  }
+
+  .trainIcons{
+    display: block;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .trainIcon{
+    width: 106px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .trainIcon img, .trainIcon span{
+    display: block;
+  }
+  .trainIcon span{
+    font-weight: 600;
+    text-align: center;
+    padding-top: 8px;
+  }
+  .iconReturn{margin-left: 8px;}
+
+  .name-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .name{margin-right: 8px;}
+  .way{display: none;}
+
+  .fare{
+    padding: 0;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fare-prices{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    padding-top: 0px;
+    width: 224px;
+  }
+  .way-fare{
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: background-color .2s ease;
+  }
+  .way-fare:hover{
+    background-color: #EFF3F7;
+  }
+  .way-fare.selected:hover{
+    background-color: #C5F6E0;
+  }
+  .way-fare.disabled{
+    background-color: #fff;
+  }
+  .way-fare.disabled:hover{
+    background-color: #EFF3F7 !important;
+  }
+  .combine{
+    font-size: 10px;
+    font-weight: 600;
+    color: #EFF3F7;
+    display: inline-block;
+    line-height: 10px;
+    padding: 5px 4px;
+    border-radius: 3px;
+    background-color: #1D2C3C;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 183px;
+    opacity: 0;
+    transition: all .2s ease;
+  }
+
+  .combine.show{opacity:1;top: -4px;}
+
+
+  .way-fare.return{margin-left: 8px;}
+  .cheapest{
+    right: 28px;
+    top: 50px;
+  }
+  .fare-descr{
+    padding: 8px 8px 8px 24px;
+  }
+
+  #selectedDepart{width: calc(100% - 114px);}
+  .selectedFare{height: 76px;}
+
+  .selectedFare.goTo1{ margin-top: 0px;}
+  .selectedFare.goTo2{ margin-top: calc(1 * 84px); height: 76px;}
+  .selectedFare.goTo3{ margin-top: calc(2 * 84px);}
+  .selectedFare.goTo4{ margin-top: calc(3 * 84px);}
+  .selectedFare.goTo5{ margin-top: calc(4 * 84px);}
+  .selectedFare.goTo6{ margin-top: calc(5 * 84px);}
+  .selectedFare.goTo7{ margin-top: calc(6 * 84px);}
+  .selectedFare.goTo8{ margin-top: calc((7 * 84px) + 40px);}
+  .selectedFare.goTo9{ margin-top: calc((8 * 84px) + 40px);}
+  .selectedFare.goTo10{ margin-top: calc((9 * 84px) + 40px);}
+  .selectedFare.goTo11{ margin-top: calc((10 * 84px) + 40px);}
+
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
