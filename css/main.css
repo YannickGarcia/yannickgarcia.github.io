@@ -335,6 +335,9 @@ background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9)
     background-attachment: fixed;
     background-size: 1421px 762px;
   }
+  .h3fares{
+    padding-bottom: 0;
+  }
   .backdrop{
     position: fixed;
     top: 0px;
